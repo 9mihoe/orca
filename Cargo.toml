@@ -1,1 +1,7 @@
-"fixing credentials"
+[package]
+edition = "2021"
+name = "orca"
+version = "0.0.1"
+
+[[bin]]
+name = "orca"
