@@ -55,7 +55,7 @@ fn solve(path: String) -> Option<u32> {
     let numbers = line_numbers.into_iter().flatten().collect::<Vec<Number>>();
     let mut sum = 0;
     for point in points {
-      println!("point: {:?}", point);
+      // println!("point: {:?}", point);
       if let Some(mult) = get_adjacent_multiples(point, &numbers) {
         sum += mult;
       }
@@ -151,7 +151,7 @@ fn get_adjacent_multiples(star: Point, numbers: &Vec<Number>) -> Option<u32> {
   for number in numbers {
     if let Some(adj_num) = is_adjacent(&star, number) {
       adj_nums.push(adj_num);
-      println!("adj_num: {:?}", adj_num);
+      // println!("adj_num: {:?}", adj_num);
       if adj_nums.len()==2 {
         return Some(adj_nums[0] * adj_nums[1]);
       }
